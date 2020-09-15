@@ -13,7 +13,7 @@ from openpyxl import load_workbook
 import time
 import datetime
 import configparser
-import csv
+
 
 reward = {
     1: 300000,
@@ -36,21 +36,25 @@ reward_title = {
     8: "统领",
 }
 
-
-# 记录log
-def write_log(log):
-    logfile = open("荣誉战场奖励log.txt", "a", encoding="utf-8")
-
+# 获取时间 转成对应的格式
+def get_time():
     t1 = time.time()
     time_local = time.localtime(t1)
     t2 = time.strftime("%Y-%m-%d %H:%M:%S", time_local)
+    return t2
 
-    logfile.write(t2 + " : " + log + "\n")
-    logfile.close
+
+# 记录log
+def write_log(log):
+    print(log)
+    with open("荣誉战场奖励log.txt", "a", encoding="utf-8") as logfile:
+
+        logfile.write(str(log) + "\n")
+
 
 # 读取ini
 def read_ini():
-    print("read_ini")
+    write_log("read_ini ... ")
 
     try:
         write_log("read ini start...")
@@ -61,14 +65,19 @@ def read_ini():
         script_path = config.get("sql_path", "script_path")
         column_name = config.get("column_name", "column")
         sql = config.get("sql_select", "sql_ini")
+        season = config.get("column_name", "season")
 
+        db_name = []
         for i in range(1, 2):
             print("read_ini111")
-            get_dbname = config.get("dbname", str(i))
-            print(get_dbname)
-            write_excel_xlsx(
-                get_dbname, get_dbname, column_name, sql, excel_path, script_path
-            )
+            get_dbname = config.get("dbname", str(i)) + season
+            write_log(get_dbname)
+            db_name.append(get_dbname)
+            # write_excel_xlsx(
+            #     get_dbname, get_dbname, column_name, sql, excel_path, script_path
+            # )
+
+        return (db_name, column_name, sql, excel_path, script_path)
     except:
         write_log("read ini error...")
         print("err")
@@ -87,8 +96,6 @@ def connect_mysql(dbname, chuan_sql):
     cur = con.cursor()
     sql = chuan_sql
 
-    # sql = '(select * from  dota_storage4 where owner_id =  440833 )union all (select * from  dota_storage9 where owner_id =  902624 )'
-
     try:
         cur.execute(sql)
         result = cur.fetchall()
@@ -102,7 +109,8 @@ def connect_mysql(dbname, chuan_sql):
 
 ##can support excel 2007 ,support xlsx.  becouse .xls only support 65535 row
 
-def write_excel_xlsx(dbname, file_name, column_name, sql, excel_path, script_path):
+
+def write_excel_xlsx(dbname, column_name, sql, excel_path, script_path):
     wb = Workbook()
     sheet = wb.active
 
@@ -152,84 +160,79 @@ def write_excel_xlsx(dbname, file_name, column_name, sql, excel_path, script_pat
                 except:
                     write_log("error! 判断排名  error")
     except:
-        print("error! write excel error")
+        write_log("error! write excel error")
 
-    wb.save(excel_path + file_name + ".xlsx")
-    print("baocun cheng gong")
+    wb.save(excel_path + dbname + ".xlsx")
+    write_log("baocun cheng gong")
 
-    write_top100_sql(script_path, file_name, dataList_top100)
-    write_sql(script_path, file_name, dataList1)
+    write_top100_sql(script_path, dbname, dataList_top100)
+    write_sql(script_path, dbname, dataList1)
 
 
 def write_top100_sql(script_path, filename, dataList1):
     write_log("write write_top100_sql start...")
-    f1 = open(script_path + filename + ".sql", "a", encoding="ansi")
+    with open(script_path + filename + ".sql", "a", encoding="ansi") as f1:
+        # f1 = open(script_path + filename + ".sql", "a", encoding="ansi")
 
-    f1.write("update role_list set expand_attr = expand_attr &(~8257536);\n")
+        f1.write("update role_list set expand_attr = expand_attr &(~8257536);\n")
 
-    print(script_path + filename + ".sql")
-    # print(filename)
-    print(dataList1)
+        print(script_path + filename + ".sql")
+        # print(filename)
+        print(dataList1)
 
-    try:
-        for strlist in range(0, int(len(dataList1) / 2)):
-            userid = dataList1[strlist * 2]
-            idnum = dataList1[strlist * 2 + 1]
-            expand_attr = order_expand_attr(idnum)
-            k = (
-                "update role_list set expand_attr = expand_attr |"
-                + str(expand_attr)
-                + " where id =  "
-                + str(userid)
-                + " limit 1;\n"
-            )
+        try:
+            for strlist in range(0, int(len(dataList1) / 2)):
+                userid = dataList1[strlist * 2]
+                idnum = dataList1[strlist * 2 + 1]
+                expand_attr = order_expand_attr(idnum)
+                k = (
+                    "update role_list set expand_attr = expand_attr |"
+                    + str(expand_attr)
+                    + " where id =  "
+                    + str(userid)
+                    + " limit 1;\n"
+                )
 
-            f1.write(k)
-    except:
-        write_log("写write_top100_sql错误")
+                f1.write(k)
+        except:
+            write_log("写write_top100_sql错误")
 
-    write_log("close f1")
-    f1.close
+        write_log("close f1")
+    # f1.close
 
 
 def write_sql(script_path, filename, dataList1):
     write_log("write sql start...")
-    f1 = open(script_path + filename + ".sql", "a", encoding="ansi")
+    with open(script_path + filename + ".sql", "a", encoding="ansi") as f1:
+        write_log(script_path + filename + ".sql")
 
-    print(script_path + filename + ".sql")
-    # print(filename)
-    print(dataList1)
+        write_log(dataList1)
 
-    try:
-        for strlist in range(0, int(len(dataList1) / 3)):
-            userid = dataList1[strlist * 3]
-            area_id = dataList1[strlist * 3 + 1]
-            reward = dataList1[strlist * 3 + 2]
+        try:
+            for strlist in range(0, int(len(dataList1) / 3)):
+                userid = dataList1[strlist * 3]
+                area_id = dataList1[strlist * 3 + 1]
+                reward = dataList1[strlist * 3 + 2]
 
-            fenbiao = int(int(userid) / 1000000)
+                fenbiao = int(int(userid) / 1000000)
+                k = (
+                    "update `pve_role_list"
+                    + str(fenbiao)
+                    + "` set pve_hornor = pve_hornor + "
+                    + str(reward)
+                    + " where role_id =  "
+                    + str(userid)
+                    + " and area_id =  "
+                    + str(area_id)
+                    + " limit 1;"
+                    + "\n"
+                )
+                f1.write(k)
+        except:
+            write_log("写sql错误")
 
-            # 	update role_list set expand_attr = expand_attr |131072 where id = 1136027 limit 1;
-
-            k = (
-                "update `pve_role_list"
-                + str(fenbiao)
-                + "` set pve_hornor = pve_hornor + "
-                + str(reward)
-                + " where role_id =  "
-                + str(userid)
-                + " and area_id =  "
-                + str(area_id)
-                + " limit 1;"
-                + "\n"
-            )
-
-            # 	k = str(userid)+","+str(area_id)+","+str(reward)+","+"\n"
-            f1.write(k)
-    except:
-        write_log("写sql错误")
-
-    write_log("close f1")
-    f1.close
+        write_log("close f1")
+        # f1.close
 
 
 def order_num(num, score):
@@ -277,6 +280,11 @@ def order_expand_attr(num):
 
 
 if __name__ == "__main__":
-    read_ini()
-    print("zhixing wan cheng")
+    write_log("--------------{0} 开始执行--------------".format(get_time()))
+    get_ini = read_ini()
+    for db_name in get_ini[0]:
+
+        write_excel_xlsx(db_name, get_ini[1], get_ini[2], get_ini[3], get_ini[4])
+    # write_log(get_ini)
+    write_log("--------------{0} 执行完成--------------".format(get_time()))
 
