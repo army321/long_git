@@ -69,13 +69,9 @@ def read_ini():
 
         db_name = []
         for i in range(1, 2):
-            print("read_ini111")
             get_dbname = config.get("dbname", str(i)) + season
-            write_log(get_dbname)
+            write_log("read_ini 编号 {0} ； 区服信息： {1}".format(i,get_dbname))
             db_name.append(get_dbname)
-            # write_excel_xlsx(
-            #     get_dbname, get_dbname, column_name, sql, excel_path, script_path
-            # )
 
         return (db_name, column_name, sql, excel_path, script_path)
     except:
@@ -99,12 +95,10 @@ def connect_mysql(dbname, chuan_sql):
     try:
         cur.execute(sql)
         result = cur.fetchall()
-        # print("select ::::",result)
+        con.close()
         return result
     except:
         print("error!  select mysql error")
-
-    con.close()
 
 
 ##can support excel 2007 ,support xlsx.  becouse .xls only support 65535 row
@@ -163,23 +157,17 @@ def write_excel_xlsx(dbname, column_name, sql, excel_path, script_path):
         write_log("error! write excel error")
 
     wb.save(excel_path + dbname + ".xlsx")
-    write_log("baocun cheng gong")
+    write_log("保存Excel成功")
 
     write_top100_sql(script_path, dbname, dataList_top100)
     write_sql(script_path, dbname, dataList1)
 
-
+# 路径 文件名 数据，保存前100的sql，主要是玩家杯子
 def write_top100_sql(script_path, filename, dataList1):
     write_log("write write_top100_sql start...")
     with open(script_path + filename + ".sql", "a", encoding="ansi") as f1:
-        # f1 = open(script_path + filename + ".sql", "a", encoding="ansi")
 
         f1.write("update role_list set expand_attr = expand_attr &(~8257536);\n")
-
-        print(script_path + filename + ".sql")
-        # print(filename)
-        print(dataList1)
-
         try:
             for strlist in range(0, int(len(dataList1) / 2)):
                 userid = dataList1[strlist * 2]
@@ -197,17 +185,11 @@ def write_top100_sql(script_path, filename, dataList1):
         except:
             write_log("写write_top100_sql错误")
 
-        write_log("close f1")
-    # f1.close
-
 
 def write_sql(script_path, filename, dataList1):
     write_log("write sql start...")
     with open(script_path + filename + ".sql", "a", encoding="ansi") as f1:
         write_log(script_path + filename + ".sql")
-
-        write_log(dataList1)
-
         try:
             for strlist in range(0, int(len(dataList1) / 3)):
                 userid = dataList1[strlist * 3]
@@ -231,7 +213,7 @@ def write_sql(script_path, filename, dataList1):
         except:
             write_log("写sql错误")
 
-        write_log("close f1")
+        # write_log("close f1")
         # f1.close
 
 
