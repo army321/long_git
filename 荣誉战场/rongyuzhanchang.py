@@ -6,14 +6,13 @@
 超过100名根据分数发奖
 前100还有勋章奖励
 """
-import os
-import pymysql
-from openpyxl import Workbook
-from openpyxl import load_workbook
+# import os
+# import datetime
+# from openpyxl import load_workbook
 import time
-import datetime
 import configparser
-
+from openpyxl import Workbook
+import get_sql
 
 reward = {
     1: 300000,
@@ -55,7 +54,7 @@ def write_log(log):
 # 读取ini
 def read_ini():
     write_log("read_ini ... ")
-
+    db_name = []
     try:
         write_log("read ini start...")
         config = configparser.ConfigParser()
@@ -67,7 +66,6 @@ def read_ini():
         sql = config.get("sql_select", "sql_ini")
         season = config.get("column_name", "season")
 
-        db_name = []
         for i in range(1, 2):
             get_dbname = config.get("dbname", str(i)) + season
             write_log("read_ini 编号 {0} ； 区服信息： {1}".format(i,get_dbname))
@@ -79,28 +77,6 @@ def read_ini():
         print("err")
 
 
-def connect_mysql(dbname, chuan_sql):
-    config = {
-        "host": "127.0.0.1",
-        "port": 3306,
-        "user": "root",
-        "passwd": "123456",
-        "db": dbname,
-    }
-
-    con = pymysql.connect(**config)
-    cur = con.cursor()
-    sql = chuan_sql
-
-    try:
-        cur.execute(sql)
-        result = cur.fetchall()
-        con.close()
-        return result
-    except:
-        print("error!  select mysql error")
-
-
 ##can support excel 2007 ,support xlsx.  becouse .xls only support 65535 row
 
 
@@ -108,7 +84,7 @@ def write_excel_xlsx(dbname, column_name, sql, excel_path, script_path):
     wb = Workbook()
     sheet = wb.active
 
-    result = connect_mysql(dbname, sql)
+    result = get_sql.connect_mysql(dbname, sql)
 
     fileds = column_name.split(",")
     idnum = 0
@@ -267,6 +243,6 @@ if __name__ == "__main__":
     for db_name in get_ini[0]:
 
         write_excel_xlsx(db_name, get_ini[1], get_ini[2], get_ini[3], get_ini[4])
-    # write_log(get_ini)
+
     write_log("--------------{0} 执行完成--------------".format(get_time()))
 
