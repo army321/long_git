@@ -107,18 +107,6 @@ class Solution(object):
             newlist.append(int(k))
         return newlist
 
-# 导出2个列表中共有的元素， 这个里面需要导入新的库
-    # def intersect(self, nums1, nums2) :
-    #     """
-    #     :type nums1: List[int]
-    #     :type nums2: List[int]
-    #     :rtype: List[int]
-    #     """
-    #     num1 = collections.Counter(nums1)
-    #     num2 = collections.Counter(nums2)
-    #     num = num1 & num2
-    #     return num.elements()
-
 
 
 if __name__ == "__main__":
@@ -129,8 +117,7 @@ if __name__ == "__main__":
     k = leetcode_data.k
     c = Solution()
     a = c.maxProfit(data)
-    # rotate_num = c.rotate(data3,k)
-    # rotate_num = c.containsDuplicate(data)
+
     rotate_num = c.plusOne(data)
 
     # for index, name in zip(data, data2):
