@@ -1,4 +1,5 @@
 import leetcode_data
+from functools import reduce
 
 
 class Solution(object):
@@ -54,14 +55,88 @@ class Solution(object):
 
         return nums
 
+    # 是否存在重复元素
+    def containsDuplicate(self, nums):
+        return False if len(nums) == len(set(nums)) else True
+
+    # 查到只出现一次的数  用异或把数组中的每个值异或一次即可，不用
+    def singleNumber(self, nums):
+
+        # n =lambda x, y: x ^ y  # 匿名函数
+        sum = 0
+        for i in nums:
+            sum = sum ^ i
+        # return reduce(n, nums)
+        return sum
+
+        # reduce()函数即为化简函数，它的执行过程为：
+        # 每一次迭代，都将上一次的迭代结果
+        # （注：第一次为init元素，如果没有指定init则为seq的第一个元素）
+        # 与下一个元素一同传入二元func函数中去执行
+
+    def moveZeroes(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: None Do not return anything, modify nums in-place instead.
+        """
+        if len(nums) < 2:
+            return nums
+        j = 0
+        for i in range(len(nums)):
+            if nums[i] != 0:
+                nums[j] = nums[i]
+                j = j + 1
+
+        while j < len(nums):
+            nums[j] = 0
+            j = j + 1
+
+        return nums
+
+    def plusOne(self, digits):
+        """
+        :type digits: List[int]
+        :rtype: List[int]
+        """
+        newstr = ""
+        newlist = []
+        for i in digits:
+            newstr += str(i)
+        num = int(newstr) +1
+        for k in str(num):
+            newlist.append(int(k))
+        return newlist
+
+# 导出2个列表中共有的元素， 这个里面需要导入新的库
+    # def intersect(self, nums1, nums2) :
+    #     """
+    #     :type nums1: List[int]
+    #     :type nums2: List[int]
+    #     :rtype: List[int]
+    #     """
+    #     num1 = collections.Counter(nums1)
+    #     num2 = collections.Counter(nums2)
+    #     num = num1 & num2
+    #     return num.elements()
+
+
 
 if __name__ == "__main__":
     data = [7, 1, 5, 3, 6, 4]
     data2 = [1, 2, 3, 4, 5, 6, 7]
+    data1 = [0, 20, 10, 20, 0, 60, 60]
     data3 = leetcode_data.nums
     k = leetcode_data.k
     c = Solution()
     a = c.maxProfit(data)
     # rotate_num = c.rotate(data3,k)
-    rotate_num = c.rotate(data2, 5)
+    # rotate_num = c.containsDuplicate(data)
+    rotate_num = c.plusOne(data)
+
+    # for index, name in zip(data, data2):
+    #     print(index, name)
+
+    # for index, name in enumerate(data2):
+    #     print(index, name)
+
     print(rotate_num)
