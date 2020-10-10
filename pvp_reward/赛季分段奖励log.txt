@@ -1,0 +1,418 @@
+read ini start...
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月/nf1A3_纷争.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/nf1A3_3308.sql
+close f1
+write sql start...
+close f1
+分段
+玩家：103978217，模式：1102，分数：2183 
+玩家：110587182，模式：1102，分数：2156 
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月/nf1A3_决战.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/nf1A3_3308.sql
+read ini start...
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月/nf1A3_纷争.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/nf1A3_3308.sql
+close f1
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月/nf1A3_决战.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/nf1A3_3308.sql
+close f1
+write sql start...
+close f1
+zhixing wan cheng
+read ini start...
+分段
+read ini start...
+分段
+read ini start...
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//纷争_lmfA3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/lmfA3_3308.sql
+close f1
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月/lmfA3_决战.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/lmfA3_3308.sql
+close f1
+write sql start...
+close f1
+zhixing wan cheng
+read ini start...
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//纷争_lmfA3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/lmfA3_3308.sql
+close f1
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月/决战_lmfA3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/lmfA3_3308.sql
+close f1
+write sql start...
+close f1
+zhixing wan cheng
+read ini start...
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//纷争_lmfA3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/lmfA3_3308.sql
+close f1
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月/决战_lmfA3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/lmfA3_3308.sql
+close f1
+write sql start...
+close f1
+zhixing wan cheng
+read ini start...
+分段
+read ini start...
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子/纷争TOP100_lmfA3.xlsx 保存成功
+zhixing wan cheng
+read ini start...
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子/纷争TOP100_lmfA3.xlsx 保存成功
+zhixing wan cheng
+read ini start...
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子/纷争TOP100_lmfA3.xlsx 保存成功
+zhixing wan cheng
+read ini start...
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子/纷争TOP100_lmfA3.xlsx 保存成功
+write sql start...
+close f1
+zhixing wan cheng
+read ini start...
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子/纷争TOP100_lmfA3.xlsx 保存成功
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//纷争_lmfA3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/lmfA3_3308.sql
+close f1
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子/决战TOP100_lmfA3.xlsx 保存成功
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月/决战_lmfA3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/lmfA3_3308.sql
+close f1
+write sql start...
+close f1
+zhixing wan cheng
+read ini start...
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子/纷争TOP100_lmfA3.xlsx 保存成功
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//纷争_lmfA3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/lmfA3_3308.sql
+close f1
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子/决战TOP100_lmfA3.xlsx 保存成功
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月/决战_lmfA3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/lmfA3_3308.sql
+close f1
+write sql start...
+close f1
+zhixing wan cheng
+read ini start...
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子/纷争TOP100_lmfA3.xlsx 保存成功
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//纷争_lmfA3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/lmfA3_3308.sql
+close f1
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子/决战TOP100_lmfA3.xlsx 保存成功
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月/决战_lmfA3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/lmfA3_3308.sql
+close f1
+write sql start...
+close f1
+zhixing wan cheng
+read ini start...
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子Excel/纷争TOP100_lmfA3.xlsx 保存成功
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子Excel/纷争TOP100_nf2A3.xlsx 保存成功
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子Excel/纷争TOP100_nf3A3.xlsx 保存成功
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子Excel/纷争TOP100_bf1A3.xlsx 保存成功
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子Excel/纷争TOP100_bf2A3.xlsx 保存成功
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子Excel/纷争TOP100_sh1A3.xlsx 保存成功
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子Excel/纷争TOP100_sh2A3.xlsx 保存成功
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子Excel/纷争TOP100_zh1A3.xlsx 保存成功
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子Excel/纷争TOP100_zh2A3.xlsx 保存成功
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子Excel/纷争TOP100_nf1A3.xlsx 保存成功
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子Excel/纷争TOP100_7kA3.xlsx 保存成功
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//纷争_lmfA3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/lmfA3_3308.sql
+close f1
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//纷争_nf2A3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/nf2A3_3308.sql
+close f1
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//纷争_nf3A3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/nf3A3_3308.sql
+close f1
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//纷争_bf1A3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/bf1A3_3308.sql
+close f1
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//纷争_bf2A3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/bf2A3_3308.sql
+close f1
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//纷争_sh1A3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/sh1A3_3308.sql
+close f1
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//纷争_sh2A3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/sh2A3_3308.sql
+close f1
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//纷争_zh1A3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/zh1A3_3308.sql
+close f1
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//纷争_zh2A3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/zh2A3_3308.sql
+close f1
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//纷争_nf1A3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/nf1A3_3308.sql
+close f1
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//纷争_7kA3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/7kA3_3308.sql
+close f1
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子Excel/决战TOP100_lmfA3.xlsx 保存成功
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子Excel/决战TOP100_nf2A3.xlsx 保存成功
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子Excel/决战TOP100_nf3A3.xlsx 保存成功
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子Excel/决战TOP100_bf1A3.xlsx 保存成功
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子Excel/决战TOP100_bf2A3.xlsx 保存成功
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子Excel/决战TOP100_sh1A3.xlsx 保存成功
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子Excel/决战TOP100_sh2A3.xlsx 保存成功
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子Excel/决战TOP100_zh1A3.xlsx 保存成功
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子Excel/决战TOP100_zh2A3.xlsx 保存成功
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子Excel/决战TOP100_nf1A3.xlsx 保存成功
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//前100杯子Excel/决战TOP100_7kA3.xlsx 保存成功
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月/决战_lmfA3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/lmfA3_3308.sql
+close f1
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月/决战_nf2A3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/nf2A3_3308.sql
+close f1
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月/决战_nf3A3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/nf3A3_3308.sql
+close f1
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月/决战_bf1A3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/bf1A3_3308.sql
+close f1
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月/决战_bf2A3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/bf2A3_3308.sql
+close f1
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月/决战_sh1A3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/sh1A3_3308.sql
+close f1
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月/决战_sh2A3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/sh2A3_3308.sql
+close f1
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月/决战_zh1A3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/zh1A3_3308.sql
+close f1
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月/决战_zh2A3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/zh2A3_3308.sql
+close f1
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月/决战_nf1A3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/nf1A3_3308.sql
+close f1
+write sql start...
+close f1
+分段
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月/决战_7kA3.xlsx 保存成功
+write sql start...
+F:/更新数据/赛季处理/pvp赛季结算/2020A3赛季9月//分段奖励/7kA3_3308.sql
+close f1
+write sql start...
+close f1
+zhixing wan cheng

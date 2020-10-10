@@ -66,7 +66,7 @@ def read_ini():
         sql = config.get("sql_select", "sql_ini")
         season = config.get("column_name", "season")
 
-        for i in range(1, 2):
+        for i in range(1, 12):
             get_dbname = config.get("dbname", str(i)) + season
             write_log("read_ini 编号 {0} ； 区服信息： {1}".format(i,get_dbname))
             db_name.append(get_dbname)
