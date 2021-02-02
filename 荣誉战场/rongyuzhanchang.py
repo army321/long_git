@@ -135,7 +135,8 @@ def write_excel_xlsx(dbname, column_name, sql, excel_path, script_path):
     wb.save(excel_path + dbname + ".xlsx")
     write_log("保存Excel成功")
 
-    write_top100_sql(script_path, dbname, dataList_top100)
+    mail_dbname = dbname+"_mail"
+    write_top100_sql(script_path, mail_dbname, dataList_top100)
     write_sql(script_path, dbname, dataList1)
 
 # 路径 文件名 数据，保存前100的sql，主要是玩家杯子
@@ -143,18 +144,20 @@ def write_top100_sql(script_path, filename, dataList1):
     write_log("write write_top100_sql start...")
     with open(script_path + filename + ".sql", "a", encoding="ansi") as f1:
 
-        f1.write("update role_list set expand_attr = expand_attr &(~8257536);\n")
+        f1.write("set names gbk;\n")
         try:
             for strlist in range(0, int(len(dataList1) / 2)):
                 userid = dataList1[strlist * 2]
                 idnum = dataList1[strlist * 2 + 1]
                 expand_attr = order_expand_attr(idnum)
                 k = (
-                    "update role_list set expand_attr = expand_attr |"
-                    + str(expand_attr)
-                    + " where id =  "
+                    'insert into mails (tar_user_id,prop,title,content,send_time,due_time,item1,item1_prop,item2,item2_prop,item3,item3_prop,item4,item4_prop,item5,item5_prop) values('
                     + str(userid)
-                    + " limit 1;\n"
+                    +',1,"荣誉战场军衔排名奖励","亲爱的英魂玩家，恭喜您上赛季荣誉战场军衔排名第'
+                    +str(idnum)
+                    +'名,请查收您的奖励！",2012300000,1616688000,'
+                    + str(expand_attr)
+                    +',3146,0,0,0,0,0,0,0,0);\n'
                 )
 
                 f1.write(k)
@@ -219,7 +222,7 @@ def order_num(num, score):
     else:
         return 8
 
-
+'''
 def order_expand_attr(num):
     if num == 1:
         return 131072
@@ -235,6 +238,34 @@ def order_expand_attr(num):
         return 4194304
     else:
         write_log("判断 expand_attr 错误")
+'''
+# 判断给的杯子
+def order_expand_attr(num):
+    if num == 1:
+        return 1401
+    elif num == 2:
+        return 1402
+    elif num == 3:
+        return 1403
+    elif num < 11:
+        return 1404
+    elif num < 51:
+        return 1405
+    elif num < 101:
+        return 1406
+    else:
+        write_log("判断 expand_attr 错误")
+
+
+'''
+1401		战场军衔排行第一
+1402		战场军衔排行第二
+1403		战场军衔排行第三
+1404		战场军衔排行十强
+1405		战场军衔排行五十强
+1406		战场军衔排行百强
+
+'''
 
 
 if __name__ == "__main__":

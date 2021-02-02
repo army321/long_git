@@ -22,7 +22,7 @@ import fenghao_zhenghe
 
 class MyFrame(wx.Frame):
     def __init__(self):
-        wx.Frame.__init__(self, parent=None, title="界面测试", size=(800, 600))
+        wx.Frame.__init__(self, parent=None, title="英魂之刃常用查询工具", size=(800, 600))
         self.set_menu()
         self.btn_area()
         self.select_area()

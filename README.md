@@ -26,3 +26,8 @@ Git鼓励大量使用分支：
 合并某分支到当前分支：git merge <name>
 
 删除分支：git branch -d <name>
+
+github 同步 可断点续传
+git fetch git://…..git
+
+Git clone，  同步 不能断点续传，可能中断
