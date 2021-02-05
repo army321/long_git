@@ -32,6 +32,7 @@ git fetch git://…..git
 
 Git clone，  同步 不能断点续传，可能中断
 
+
 vim 知识点
 
 操作符+动作命令 = 操作
