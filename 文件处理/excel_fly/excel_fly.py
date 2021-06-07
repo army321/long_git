@@ -81,6 +81,13 @@ def rename_flie_sheet_name():
 def rename_flie_name():
     file_path = f"E:\gittest\long_git\文件处理\excel_fly"
     file_list = os.listdir(file_path)
+    f
+
+# 修改测试
+def rename_flie_name():
+    file_path = f"E:\gittest\long_git\文件处理\excel_fly"
+    file_list = os.listdir(file_path)
+    f
 
 
 if __name__ == "__main__":
