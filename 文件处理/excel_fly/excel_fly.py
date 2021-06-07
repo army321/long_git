@@ -16,6 +16,7 @@ def create_more_xlsx_file():
     app.quit()
 
 
+# 绘制图表
 def mat_test():
     x = [1, 2, 3, 4, 5]
     y = [2, 4, 6, 8, 10]
@@ -81,13 +82,18 @@ def rename_flie_sheet_name():
 def rename_flie_name():
     file_path = f"E:\gittest\long_git\文件处理\excel_fly"
     file_list = os.listdir(file_path)
-    f
+    for index, i in enumerate(file_list):
+        print("{},{}".format(index, i))
+        if "副本" in i:
+            new_file = i.replace("副本", "rename")
+            old_file_path = os.path.join(file_path, i)
+            new_file_path = os.path.join(file_path, new_file)
+            os.rename(old_file_path, new_file_path)
 
-# 修改测试
-def rename_flie_name():
-    file_path = f"E:\gittest\long_git\文件处理\excel_fly"
-    file_list = os.listdir(file_path)
-    f
+
+def lada(x,y):
+    result = lambda x, y: x * y
+    print(result(x,y))
 
 
 if __name__ == "__main__":
@@ -97,5 +103,7 @@ if __name__ == "__main__":
     # numpy_test()
     # pandas_test()
     # get_path_file_name()
-    rename_flie()
+    # rename_flie()
+    # rename_flie_name()
+    lada(5,7)
     print("执行完成")

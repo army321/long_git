@@ -40,11 +40,11 @@ class MyFrame(wx.Frame):
         self.btn_game_note = wx.Button(self.btn_panel, label="分数")
         self.btn_status = wx.Button(self.btn_panel, label="状态")
         self.btn_mails = wx.Button(self.btn_panel, label="邮件")
+        self.btn_time = wx.Button(self.btn_panel, label="时间戳")
 
         # 界面布局
         self.box_sizer = wx.BoxSizer(wx.VERTICAL)
         self.box_sizer.Add(self.btn_select, 0, wx.ALL, 10)
-
         self.box_sizer.Add(self.btn_exit, 0, wx.ALL, 10)
         self.box_sizer.Add(self.btn_exit2, 0, wx.ALL, 10)
         self.box_sizer.Add(self.btn_online, 0, wx.ALL, 10)
@@ -52,6 +52,7 @@ class MyFrame(wx.Frame):
         self.box_sizer.Add(self.btn_status, 0, wx.ALL, 10)
         self.box_sizer.Add(self.btn_mails, 0, wx.ALL, 10)
         self.box_sizer.Add(self.btn_openid, 0, wx.ALL, 10)
+        self.box_sizer.Add(self.btn_time, 0, wx.ALL, 10)
         self.btn_panel.SetSizer(self.box_sizer)
 
         # 功能绑定
@@ -63,6 +64,7 @@ class MyFrame(wx.Frame):
         self.btn_game_note.Bind(wx.EVT_BUTTON, self.click_game_note)
         self.btn_status.Bind(wx.EVT_BUTTON, self.click_user_status)
         self.btn_mails.Bind(wx.EVT_BUTTON, self.on_click_mails)
+        self.btn_time.Bind(wx.EVT_BUTTON, self.on_click_time)
 
         self.box_sizer.Layout()
         self.btn_panel.Layout()
@@ -156,9 +158,15 @@ class MyFrame(wx.Frame):
         a = sql.statement.openid(self, get_userid)
         self.set_text(a[0], a[1])
 
+    def on_click_time(self, event):
+        get_userid = self.text_nickname.GetValue()
+        a = sql.statement.get_time(self, get_userid)
+        self.set_text(a[0], a[1])
+
+
     # 把sql写到对应的框中，用统一的方法
     def set_text(self, i, j):
-        self.text_duankouhao_num.SetLabel(str(i))
+        self.text_duankouhao_num.SetLabel("{}".format(i))
         self.text_info.SetLabel("{}".format(j))
         pyperclip.copy("{}".format(j))
 
@@ -187,10 +195,17 @@ class MyFrame(wx.Frame):
         )
         newitem2.SetBitmap(wx.Bitmap("away.png"))
 
+        newitem3 = wx.MenuItem(
+            parentMenu=filemenu, id=103, text=t.MENU_3, kind=wx.ITEM_NORMAL
+        )
+        newitem3.SetBitmap(wx.Bitmap("away.png"))
+
         filemenu.AppendItem(newitem)
         filemenu.AppendSeparator()  # 添加分割线
         filemenu.AppendItem(newitem2)
-
+        filemenu.AppendSeparator()  # 添加分割线
+        filemenu.AppendItem(newitem3)
+        
         # 对整个菜单栏绑定功能，具体功能在菜单中根据getid判断
         self.Bind(wx.EVT_MENU, self.click_menu)
 
@@ -201,7 +216,9 @@ class MyFrame(wx.Frame):
             self.create_new_frame_fenghao()
         if get_id == 102:
             self.create_new_frame_fenghaozhenghe()
-            print("2222222222menu.....")
+        if get_id == 103:
+            self.create_new_frame_data_consolidation()
+
 
     def create_new_frame_fenghao(self):
         APP2 = wx.App()
@@ -216,6 +233,13 @@ class MyFrame(wx.Frame):
         MYFRAME3.Show()
         APP3.MainLoop()
         print("menu.....")
+
+    # 整合多个文件的数据到一个文件中，然后生成封号脚本
+    def create_new_frame_data_consolidation(self):
+        APP4 = wx.App()
+        MYFRAME4 = MyFrame4()
+        MYFRAME4.Show()
+        APP4.MainLoop()
 
 
 # 弹出的每日封号数据生成界面
@@ -296,6 +320,46 @@ class MyFrame3(wx.Frame):
         get_path = self.text_path.GetValue()
         a = fenghao_zhenghe.get_file_name(get_path)
         self.text_path_txt.SetLabel("{}".format(a))
+
+#  data consolidation interface 
+class MyFrame4(wx.Frame):
+    def __init__(self):
+        wx.Frame.__init__(self, parent=None, title="数据整合", size=(400, 300))
+        self.new_area()
+
+    def new_area(self):
+
+        self.btn_panel = wx.Panel(self, -1, pos=(580, 10), size=(200, 500))  # 功能按钮区
+
+        self.text_path_txt = wx.StaticText(
+            self.btn_panel, label="输入路径", style=wx.ALIGN_CENTRE
+        )
+        self.text_path = wx.TextCtrl(self.btn_panel)
+        # self.btn_create_sql = wx.Button(self.btn_panel, label="封号生成")
+        self.btn_create_sql_zhenghe = wx.Button(self.btn_panel, label="整合数据")
+
+        # 界面布局
+        self.box_sizer = wx.BoxSizer(wx.VERTICAL)
+        self.box_sizer.Add(self.text_path_txt, 5, wx.EXPAND, 10)
+        self.box_sizer.Add(self.text_path, 5, wx.EXPAND, 10)
+        # self.box_sizer.Add(self.btn_create_sql, 5, wx.EXPAND, 10)
+        self.box_sizer.Add(self.btn_create_sql_zhenghe, 5, wx.EXPAND, 10)
+        self.btn_panel.SetSizer(self.box_sizer)
+
+        self.box_sizer.Layout()
+        self.btn_panel.Layout()
+        # self.Layout()
+
+        # 功能绑定
+        # self.btn_create_sql.Bind(wx.EVT_BUTTON, self.on_click_create)
+        self.btn_create_sql_zhenghe.Bind(wx.EVT_BUTTON, self.on_click_create_zhenghe)
+
+    def on_click_create_zhenghe(self, event):
+        print("开始生成")
+        get_path = self.text_path.GetValue()
+        a = fenghao_zhenghe.get_file_name(get_path)
+        self.text_path_txt.SetLabel("{}".format(a))
+
 
 
 if __name__ == "__main__":

@@ -34,6 +34,9 @@ Git clone，  同步 不能断点续传，可能中断
 
 
 vim 知识点
+这个博客很好的说明了vim的各种功能
+https://blog.csdn.net/sxy2475/article/details/76222012
+
 
 操作符+动作命令 = 操作
 
@@ -77,3 +80,21 @@ e 词尾
 b 前一个单词 
 
 n 查找下一处 N 查找上一处
+
+<C-k>  Ctrl + k 
+<CR> 回车键
+ 可视模式 用来选中内容 然后修改 
+ 3种可视模式 v 字符可视模式
+ V 行可视模式
+ ctrl+v 面向块的可视模式
+
+
+修改大小写锁定键为esc键，
+新建文本文件并写入以下内容：
+
+Windows Registry Editor Version 5.00
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
+"Scancode Map"=hex:00,00,00,00,00,00,00,00,02,00,00,00,01,00,3a,00,00,00,00,00
+
+然后重命名为xx.reg 写入注册表后，再双击注入注册表即可。
+重启后就生效。

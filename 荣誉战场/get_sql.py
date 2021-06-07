@@ -17,7 +17,7 @@ def connect_mysql(dbname, chuan_sql):
     try:
         cur.execute(sql)
         result = cur.fetchall()
-        con.close()
+        con.close()  #关闭连接
         return result
     except:
         print("error!  select mysql error")
