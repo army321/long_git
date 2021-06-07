@@ -9,7 +9,9 @@ git commit -m "这里写注释的内容"
 git remote add origin git@github.com:army321/long_git.git  --这个是设置远程仓库的  这个应该只要设置一次就好了，后续没改就不用再设置
 
 git push -u origin master  把提交的内容同步到远程仓库
-git push  origin master 
+git push  origin master   直接git push 也可
+
+git pull 下载远程的内容
 
 git log --查看log 查看log状态下，按 Q 键可以退出
 
