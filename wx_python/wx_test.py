@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import wx
 import pyperclip
+
 import text_file as t
 import select_statement as sql
 import class_fenghao
@@ -22,7 +23,7 @@ import fenghao_zhenghe
 
 class MyFrame(wx.Frame):
     def __init__(self):
-        wx.Frame.__init__(self, parent=None, title="英魂之刃常用查询工具", size=(800, 600))
+        wx.Frame.__init__(self, parent=None, title=t.Frame_title, size=(800, 600))
         self.set_menu()
         self.btn_area()
         self.select_area()
@@ -32,15 +33,15 @@ class MyFrame(wx.Frame):
         self.btn_panel = wx.Panel(self, -1, pos=(580, 10), size=(200, 500))  # 功能按钮区
 
         # 按钮生成
-        self.btn_select = wx.Button(self.btn_panel, label="查询昵称")
-        self.btn_openid = wx.Button(self.btn_panel, label="赛事ID")
-        self.btn_exit = wx.Button(self.btn_panel, label="rolelist")
-        self.btn_exit2 = wx.Button(self.btn_panel, label="emoney")
-        self.btn_online = wx.Button(self.btn_panel, label="在线情况")
-        self.btn_game_note = wx.Button(self.btn_panel, label="分数")
-        self.btn_status = wx.Button(self.btn_panel, label="状态")
-        self.btn_mails = wx.Button(self.btn_panel, label="邮件")
-        self.btn_time = wx.Button(self.btn_panel, label="时间戳")
+        self.btn_select = wx.Button(self.btn_panel, label=t.BTN_1)
+        self.btn_openid = wx.Button(self.btn_panel, label=t.BTN_2)
+        self.btn_exit = wx.Button(self.btn_panel, label=t.BTN_3)
+        self.btn_exit2 = wx.Button(self.btn_panel, label=t.BTN_4)
+        self.btn_online = wx.Button(self.btn_panel, label=t.BTN_5)
+        self.btn_game_note = wx.Button(self.btn_panel, label=t.BTN_6)
+        self.btn_status = wx.Button(self.btn_panel, label=t.BTN_7)
+        self.btn_mails = wx.Button(self.btn_panel, label=t.BTN_8)
+        self.btn_time = wx.Button(self.btn_panel, label=t.BTN_9)
 
         # 界面布局
         self.box_sizer = wx.BoxSizer(wx.VERTICAL)
@@ -225,14 +226,14 @@ class MyFrame(wx.Frame):
         MYFRAME2 = MyFrame2()
         MYFRAME2.Show()
         APP2.MainLoop()
-        print("menu.....")
+        # print("menu.....")
 
     def create_new_frame_fenghaozhenghe(self):
         APP3 = wx.App()
         MYFRAME3 = MyFrame3()
         MYFRAME3.Show()
         APP3.MainLoop()
-        print("menu.....")
+        # print("menu.....")
 
     # 整合多个文件的数据到一个文件中，然后生成封号脚本
     def create_new_frame_data_consolidation(self):
@@ -276,7 +277,7 @@ class MyFrame2(wx.Frame):
         # self.btn_create_sql_zhenghe.Bind(wx.EVT_BUTTON, self.on_click_create_zhenghe)
 
     def on_click_create(self, event):
-        print("开始生成")
+        # print("开始生成")
         get_path = self.text_path.GetValue()
         a = class_fenghao.get_file_name(get_path)
         self.text_path_txt.SetLabel("{}".format(a))
@@ -316,7 +317,7 @@ class MyFrame3(wx.Frame):
         self.btn_create_sql_zhenghe.Bind(wx.EVT_BUTTON, self.on_click_create_zhenghe)
 
     def on_click_create_zhenghe(self, event):
-        print("开始生成")
+        # print("开始生成")
         get_path = self.text_path.GetValue()
         a = fenghao_zhenghe.get_file_name(get_path)
         self.text_path_txt.SetLabel("{}".format(a))
@@ -355,7 +356,7 @@ class MyFrame4(wx.Frame):
         self.btn_create_sql_zhenghe.Bind(wx.EVT_BUTTON, self.on_click_create_zhenghe)
 
     def on_click_create_zhenghe(self, event):
-        print("开始生成")
+        # print("开始生成")
         get_path = self.text_path.GetValue()
         a = fenghao_zhenghe.get_file_name(get_path)
         self.text_path_txt.SetLabel("{}".format(a))
