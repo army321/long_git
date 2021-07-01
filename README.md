@@ -36,3 +36,14 @@ git fetch git://…..git
 Git clone，  同步 不能断点续传，可能中断
 
 
+
+python 打包exe
+要打包的文件放C:\Users\Administrator 下
+pyinstaller -F 要打包的名字.py -w
+
+-F：打包后只生成单个exe格式文件；
+-D：默认选项，创建一个目录，包含exe文件以及大量依赖文件；
+-c：默认选项，使用控制台(就是类似cmd的黑框)；
+-w：不使用控制台；
+-p：添加搜索路径，让其找到对应的库；
+-i：改变生成程序的icon图标。
