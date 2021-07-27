@@ -1,0 +1,8 @@
+ time:log txt 
+ time:log txt 
+ <built-in function time>:time:log txt 
+ 1627299962.5784004:time:log txt 
+ time.struct_time(tm_year=2021, tm_mon=7, tm_mday=26, tm_hour=11, tm_min=47, tm_sec=24, tm_wday=0, tm_yday=207, tm_isdst=0):time:log txt 
+ 2021-07-26 11:49:32:time:log txt 
+ 2021-07-26 11:50:23:  log txt 
+ 2021-07-26 13:05:32:  log txt 
