@@ -1,12 +1,26 @@
 # long_git
 
+初始设置一般只需设置一次即可。
+初始设置本地Git和GitHub的连接
+需要在本地生成对应的公钥，在git里面输入
+ssh-keygen  -t rsa –C “youremail@example.com” 需要将引号部分替换成自己的邮箱（注册GitHub的）；
+文件在C:\Users\Administrator\.ssh  里面，用文本工具打开。
+
+然后在GitHub的设置setting里面，添加这个公钥， SSH and GPG keys
+添加完成后即可开始。
+在一个新的文件夹下面打开本地的Git输入框。
+然后输入 
+git init
+
+设置提交代码的用户信息 
+git config --global user.name "irozhi" (引号里面是自定义的用户名字)
+git remote add origin git@github.com:army321/long_git.git  --这个是设置远程仓库的  这个应该只要设置一次就好了，后续没改就不用再设置
+
 
 常用git命令：
 git add file_name   如果是文件夹，则为：  文件夹名/    ---注意有一个斜杠
 
 git commit -m "这里写注释的内容"
-
-git remote add origin git@github.com:army321/long_git.git  --这个是设置远程仓库的  这个应该只要设置一次就好了，后续没改就不用再设置
 
 git push -u origin master  把提交的内容同步到远程仓库
 git push  origin master   直接git push 也可
