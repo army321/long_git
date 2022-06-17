@@ -1,9 +1,12 @@
 # long_git
 
 初始设置一般只需设置一次即可。
-初始设置本地Git和GitHub的连接
+
+初始设置本地Git和GitHub的连接。
 需要在本地生成对应的公钥，在git里面输入
+
 ssh-keygen  -t rsa –C “youremail@example.com” 需要将引号部分替换成自己的邮箱（注册GitHub的）；
+
 文件在C:\Users\Administrator\.ssh  里面，用文本工具打开。
 
 然后在GitHub的设置setting里面，添加这个公钥， SSH and GPG keys
